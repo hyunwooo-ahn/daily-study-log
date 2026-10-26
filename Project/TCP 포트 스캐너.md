@@ -63,13 +63,7 @@ def TCP_port_finder():
 
  
 
-        sock = socket.socket(
-
-            socket.AF_INET,   #IPv4 주소 체계 사용
-
-            socket.SOCK_STREAM #TCP 방식으로 통신할 소켓을 생성
-
-        )
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM )
 
   
 
