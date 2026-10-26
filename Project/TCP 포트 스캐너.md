@@ -31,7 +31,7 @@ def TCP_port_finder():
   
   
 
-    # 검사 대상 TCP 포트 번호를 지정한다.
+  
 
     while True:
 
@@ -61,7 +61,7 @@ def TCP_port_finder():
 
     for target_port in range(target_port_start, target_port_end+1):
 
-    # IPv4 기반 TCP 소켓을 생성한다.
+ 
 
         sock = socket.socket(
 
@@ -73,21 +73,18 @@ def TCP_port_finder():
 
   
 
-        # 연결 제한 시간을 1초로 설정한다.
+    
 
         sock.settimeout(10)
 
         try:
 
-            # 지정한 IP 주소와 포트에 TCP 연결을 시도한다.
-
-            #connect_ex()는 지정한 IP 주소와 포트 번호로 TCP 연결을 시도하고, 그 결과를 숫자로 반환하는 함수
 
             result = sock.connect_ex((target_ip, target_port))
 
   
 
-            # 반환값이 0이면 TCP 연결에 성공한 것이다.
+           
 
             if result == 0:
 
@@ -107,7 +104,7 @@ def TCP_port_finder():
 
         except OSError:
 
-            # 네트워크 연결 과정에서 발생한 예외를 처리한다.
+            
 
             print("네트워크 오류 확인 불가")
 
@@ -116,7 +113,7 @@ def TCP_port_finder():
 
         finally:
 
-            # 검사에 사용한 소켓 자원을 정리한다.
+            
 
             sock.close()
 
